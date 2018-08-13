@@ -13,8 +13,19 @@ public class StartScreen implements Screen {
 	boolean on = true;
 
 	public Screen start() {
-
-		System.out.println("Enter Username to log in.");
+		String header = "\r\n" + 
+				"\r\n" + 
+				"d8888b. d88888b db    db d888888b d88888b d8888b.      d8888b.  .d8b.  d8b   db db   dD \r\n" + 
+				"88  `8D 88'     `8b  d8' `~~88~~' 88'     88  `8D      88  `8D d8' `8b 888o  88 88 ,8P' \r\n" + 
+				"88   88 88ooooo  `8bd8'     88    88ooooo 88oobY'      88oooY' 88ooo88 88V8o 88 88,8P   \r\n" + 
+				"88   88 88~~~~~  .dPYb.     88    88~~~~~ 88`8b        88~~~b. 88~~~88 88 V8o88 88`8b   \r\n" + 
+				"88  .8D 88.     .8P  Y8.    88    88.     88 `88.      88   8D 88   88 88  V888 88 `88. \r\n" + 
+				"Y8888D' Y88888P YP    YP    YP    Y88888P 88   YD      Y8888P' YP   YP VP   V8P YP   YD \r\n" + 
+				"                                                                                        \r\n" + 
+				"                                                                                        \r\n" + 
+				"\r\n" + 
+				"";
+		System.out.println(header);
 		System.out.println("Type new to sign up if you are new to this bank.");
 		System.out.println("Type admin if to log in as an administrator");
 		String username = scan.nextLine();
