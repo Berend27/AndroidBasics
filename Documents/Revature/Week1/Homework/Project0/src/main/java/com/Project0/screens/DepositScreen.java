@@ -30,7 +30,7 @@ public class DepositScreen implements Screen {
 		try {
 		System.out.println("Enter an ammount to deposit: ");
 		System.out.print("$");
-		deposit = Double.parseDouble(scan.nextLine().replaceAll("$",""));
+		deposit = Double.parseDouble(scan.nextLine());
 		if (deposit < 0)
 			return new DepositScreen();
 		} catch (Exception e) { return new DepositScreen(); }

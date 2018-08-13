@@ -13,6 +13,7 @@ public class StartScreen implements Screen {
 	boolean on = true;
 
 	public Screen start() {
+
 		System.out.println("Enter Username to log in.");
 		System.out.println("Type new to sign up if you are new to this bank.");
 		System.out.println("Type admin if to log in as an administrator");

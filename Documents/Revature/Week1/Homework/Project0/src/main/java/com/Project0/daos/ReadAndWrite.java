@@ -35,7 +35,7 @@ public class ReadAndWrite {
 	
 	public static void write (String file, String text)
 	  {
-	    StringBuffer sb = new StringBuffer("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\");
+	    StringBuffer sb = new StringBuffer(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\");
 	    sb.append(file);
 	    sb.append(".txt");
 	    file = sb.toString();
@@ -67,7 +67,7 @@ public class ReadAndWrite {
 	  
 	  public static String read (String file) 
 	  {
-	    StringBuffer sb = new StringBuffer("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\");
+	    StringBuffer sb = new StringBuffer(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\");
 	    sb.append(file);
 	    sb.append(".txt");
 	    file = sb.toString();
@@ -88,8 +88,9 @@ public class ReadAndWrite {
 	  
 	  public static String adminRead (String file) throws FileNotFoundException
 	  {
-	    StringBuffer sb = new StringBuffer("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\");
-	    sb.append(file);
+	    // StringBuffer sb = new StringBuffer("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\");
+	    StringBuffer sb = new StringBuffer(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\");
+		sb.append(file);
 	    sb.append(".txt");
 	    file = sb.toString();
 	    String text = "";
@@ -112,7 +113,7 @@ public class ReadAndWrite {
 	  {
 		  String number = "1";
 		  try {
-			  FileReader reader = new FileReader("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\accounts.txt");
+			  FileReader reader = new FileReader(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\accounts.txt");
 			  BufferedReader rBuffer = new BufferedReader(reader);
 			  String[] split = rBuffer.readLine().split(" ");
 			  rBuffer.close();
@@ -133,7 +134,7 @@ public class ReadAndWrite {
 		  String name;
 		  String number = "1";
 		  try {
-			  FileReader reader = new FileReader("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\accounts.txt");
+			  FileReader reader = new FileReader(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\accounts.txt");
 			  BufferedReader rBuffer = new BufferedReader(reader);
 			  String[] split = rBuffer.readLine().split(" ");
 			  rBuffer.close();
@@ -147,7 +148,7 @@ public class ReadAndWrite {
 			  }
 		  	} catch (Exception e) { }
 		  
-		  StringBuffer sb = new StringBuffer("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\");
+		  StringBuffer sb = new StringBuffer(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\");
 		  sb.append(number + ".txt");
 		  name = sb.toString();
 		  return name;
@@ -158,7 +159,7 @@ public class ReadAndWrite {
 	{
 		String accounts = " ";
 		try {
-			FileReader reader = new FileReader("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\accounts.txt");
+			FileReader reader = new FileReader(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\accounts.txt");
 			BufferedReader rBuffer = new BufferedReader(reader);
 			accounts = rBuffer.readLine();
 			rBuffer.close();
@@ -166,7 +167,7 @@ public class ReadAndWrite {
 			{ System.out.println("Couldn't access account numbers file."); }
 		
 		try {
-			FileWriter writer = new FileWriter("C:\\Users\\Berend\\Documents\\Revature\\Week1\\Homework\\Project0\\src\\main\\resources\\users\\accounts.txt");
+			FileWriter writer = new FileWriter(System.getProperty("user.dir") + "\\src\\main\\resources\\users\\accounts.txt");
 		    BufferedWriter wBuffer1 = new BufferedWriter(writer);
 		    String[] split = accounts.split(" ");
 	    	StringBuffer sb = new StringBuffer();
